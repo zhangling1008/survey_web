@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>心理问卷调查</title>
+</head>
+<body>
+
+<h1>心理问卷调查</h1>
+
+<form action="/submit-survey" method="post">
+
+    <label for="name">姓名:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="age">年龄:</label><br>
+    <input type="number" id="age" name="age" min="0" required><br>
+
+    <label for="q1">1. 你经常感到焦虑吗？</label><br>
+    <input type="radio" id="q1-yes" name="q1" value="yes" required>
+    <label for="q1-yes">是</label><br>
+    <input type="radio" id="q1-no" name="q1" value="no">
+    <label for="q1-no">否</label><br>
+
+    <label for="q2">2. 你觉得自己的压力如何？</label><br>
+    <select id="q2" name="q2" required>
+        <option value="">请选择</option>
+        <option value="low">很低</option>
+        <option value="medium">中等</option>
+        <option value="high">很高</option>
+    </select><br>
+
+    <label for="q3">3. 你通常如何应对压力？</label><br>
+    <textarea id="q3" name="q3" rows="4" cols="50" required></textarea><br>
+
+    <input type="submit" value="提交问卷">
+
+</form>
+
+</body>
+</html>
